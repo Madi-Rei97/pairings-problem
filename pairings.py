@@ -1,6 +1,16 @@
 def find_pairs(num_string):
-  # Write your solution here!
-  pass
+  num_list = num_string.split()
+  int_list = [int(num) for num in num_list]
+
+  num_set = set()
+  for num in int_list:
+    for numb in int_list:
+      if num < numb:
+        num_set.add((num, numb))
+  
+  return num_set
+
+
 
 
 # Test cases
